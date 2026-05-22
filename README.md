@@ -1,6 +1,6 @@
-# 🚀 OpenGateway + Hermes Agent — Free LLM Setup Guide
+# 🚀 Panduan Lengkap: OpenGateway + Hermes Agent
 
-> **Dapetin Xiaomi MiMo v2.5 Pro GRATIS di Hermes Agent lewat OpenGateway (gitlawb)**
+> **Mendapatkan akses gratis ke Xiaomi MiMo v2.5 Pro melalui OpenGateway (gitlawb) di Hermes Agent**
 
 [![OpenGateway](https://img.shields.io/badge/OpenGateway-gitlawb.com-000?style=for-the-badge)](https://gitlawb.com/opengateway)
 [![Hermes Agent](https://img.shields.io/badge/Hermes-Agent-FFD700?style=for-the-badge)](https://github.com/NousResearch/hermes-agent)
@@ -8,97 +8,97 @@
 
 ---
 
-## 📋 Table of Contents
+## Daftar Isi
 
-- [Apa itu OpenGateway?](#apa-itu-opengateway)
-- [Apa itu Hermes Agent?](#apa-itu-hermes-agent)
-- [Prasyarat](#prasyarat)
-- [Step 1: Dapatkan API Key](#step-1-dapatkan-api-key)
-- [Step 2: Install Hermes Agent](#step-2-install-hermes-agent)
-- [Step 3: Konfigurasi OpenGateway di Hermes](#step-3-konfigurasi-opengateway-di-hermes)
-- [Step 4: Test Koneksi](#step-4-test-koneksi)
-- [Step 5: Restart Gateway](#step-5-restart-gateway)
-- [Available Models](#available-models)
-- [Troubleshooting](#troubleshooting)
-- [FAQ](#faq)
+- [Apa Itu OpenGateway?](#apa-itu-opengateway)
+- [Apa Itu Hermes Agent?](#apa-itu-hermes-agent)
+- [Persyaratan](#persyaratan)
+- [Langkah 1: Dapatkan API Key](#langkah-1-dapatkan-api-key)
+- [Langkah 2: Instal Hermes Agent](#langkah-2-instal-hermes-agent)
+- [Langkah 3: Konfigurasi OpenGateway di Hermes](#langkah-3-konfigurasi-opengateway-di-hermes)
+- [Langkah 4: Uji Koneksi](#langkah-4-uji-koneksi)
+- [Langkah 5: Mulai Ulang Gateway](#langkah-5-mulai-ulang-gateway)
+- [Model yang Tersedia](#model-yang-tersedia)
+- [Pemecahan Masalah](#pemecahan-masalah)
+- [Pertanyaan yang Sering Diajukan](#pertanyaan-yang-sering-diajukan)
 
 ---
 
-## Apa itu OpenGateway?
+## Apa Itu OpenGateway?
 
-**OpenGateway** adalah open LLM inference gateway oleh [gitlawb](https://gitlawb.com). Fitur utama:
+**OpenGateway** adalah gerbang inferensi LLM terbuka yang dikembangkan oleh [gitlawb](https://gitlawb.com). Berikut adalah fitur-fitur utamanya:
 
-- **Satu endpoint OpenAI-compatible** — ganti base URL aja, model routing otomatis
-- **Multi-provider routing** — Xiaomi MiMo, GMI Cloud, dan lebih banyak lagi
-- **API key management** — generate, scope, revoke dari dashboard
-- **Real-time usage dashboard** — lihat token usage lo secara live
-- **GRATIS selama partnership window** — auth optional hari ini, required soon
+- **Satu endpoint yang kompatibel dengan OpenAI** — cukup ganti URL dasar, dan routing model akan dilakukan secara otomatis
+- **Routing multi-penyedia** — mendukung Xiaomi MiMo, GMI Cloud, dan penyedia lainnya
+- **Manajemen API Key** — buat, atur cakupan, dan cabut kunci langsung dari dasbor
+- **Dasbor penggunaan real-time** — pantau penggunaan token secara langsung
+- **Gratis selama jendela kemitraan** — autentikasi bersifat opsional saat ini, namun akan segera diwajibkan
 
 Endpoint: `https://opengateway.gitlawb.com/v1`
 
-## Apa itu Hermes Agent?
+## Apa Itu Hermes Agent?
 
-**Hermes Agent** adalah AI agent framework open-source oleh [Nous Research](https://nousresearch.com):
+**Hermes Agent** adalah kerangka kerja AI agent sumber terbuka yang dikembangkan oleh [Nous Research](https://nousresearch.com):
 
-- Self-improving skills system
-- Persistent memory across sessions
+- Sistem keterampilan yang terus meningkatkan diri
+- Memori persisten lintas sesi
 - Multi-platform (Telegram, Discord, Slack, WhatsApp, CLI)
-- 200+ model providers
-- Built-in cron scheduler
-- Subagent delegation
+- Mendukung lebih dari 200 penyedia model
+- Penjadwal bawaan (cron)
+- Delegasi sub-agent
 
 ---
 
-## Prasyarat
+## Persyaratan
 
-| Requirement | Version |
+| Kebutuhan | Versi |
 |---|---|
-| OS | Linux / macOS / WSL2 |
-| Python | 3.11+ |
-| Node.js | 22+ (recommended 24) |
-| Internet | Yes |
+| Sistem Operasi | Linux / macOS / WSL2 |
+| Python | 3.11 atau lebih baru |
+| Node.js | 22 atau lebih baru (disarankan 24) |
+| Koneksi Internet | Diperlukan |
 
 ---
 
-## Step 1: Dapatkan API Key
+## Langkah 1: Dapatkan API Key
 
-1. Buka **https://gitlawb.com/opengateway**
-2. Klik **"sign in to generate a key"**
-3. Login dengan akun **X (Twitter)** lo
-4. Di dashboard, klik **"Create Key"**
-5. Copy key-nya (format: `ogw_live_xxxxx`)
+1. Buka halaman **https://gitlawb.com/opengateway**
+2. Klik tombol **"sign in to generate a key"**
+3. Masuk menggunakan akun **X (Twitter)** Anda
+4. Pada dasbor, klik **"Create Key"**
+5. Salin kunci yang dihasilkan (format: `ogw_live_xxxxx`)
 
-> ⚠️ Key ini **GRATIS** selama partnership window. Auth optional hari ini, tapi bakal jadi required soon. Buruan ambil!
+> ⚠️ Kunci ini **gratis** selama jendela kemitraan berlangsung. Autentikasi bersifat opsional saat ini, namun akan segera diwajibkan. Segera dapatkan selagi tersedia!
 
 ---
 
-## Step 2: Install Hermes Agent
+## Langkah 2: Instal Hermes Agent
 
-Kalau belum install Hermes:
+Jika Anda belum menginstal Hermes, jalankan perintah berikut:
 
 ```bash
-# One-liner install
+# Instalasi dengan satu perintah
 curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
 
-# Reload shell
+# Muat ulang konfigurasi shell
 source ~/.bashrc
 
-# Verify
+# Verifikasi instalasi
 hermes --version
 ```
 
 ---
 
-## Step 3: Konfigurasi OpenGateway di Hermes
+## Langkah 3: Konfigurasi OpenGateway di Hermes
 
-### Option A: Edit config.yaml langsung (Recommended)
+### Opsi A: Mengedit file config.yaml langsung (Disarankan)
 
 ```bash
-# Buka config
+# Buka file konfigurasi
 nano ~/.hermes-2/config.yaml
 ```
 
-Edit bagian `model` dan `providers`:
+Ubah bagian `model` dan `providers` sebagai berikut:
 
 ```yaml
 model:
@@ -113,44 +113,44 @@ providers:
   xiaomi:
     base_url: https://opengateway.gitlawb.com/v1
     default_model: mimo-v2.5-pro
-    api_key: ogw_live_YOUR_KEY_HERE  # ← Ganti dengan key lo
+    api_key: ogw_live_KUNCI_ANDA_DI_SINI  # ← Ganti dengan kunci Anda
     name: Xiaomi MiMo
 ```
 
-### Option B: Pakai CLI
+### Opsi B: Menggunakan CLI
 
 ```bash
-# Set provider
+# Atur penyedia
 hermes config set model.provider xiaomi
 
-# Set model
+# Atur model default
 hermes config set model.default mimo-v2.5-pro
 
-# Set base URL
+# Atur URL dasar
 hermes config set model.base_url https://opengateway.gitlawb.com/v1
 
-# Set API key
-hermes config set providers.xiaomi.api_key ogw_live_YOUR_KEY_HERE
+# Atur API Key
+hermes config set providers.xiaomi.api_key ogw_live_KUNCI_ANDA_DI_SINI
 
-# Set base URL di provider juga
+# Atur URL dasar pada penyedia
 hermes config set providers.xiaomi.base_url https://opengateway.gitlawb.com/v1
 ```
 
-### Option C: Custom Provider (kalau mau beda nama)
+### Opsi C: Penyedia Kustom
 
-Kalau lo mau OpenGateway sebagai provider terpisah (bukan replace xiaomi):
+Jika Anda ingin menggunakan OpenGateway sebagai penyedia terpisah (tanpa mengganti konfigurasi xiaomi yang sudah ada):
 
 ```yaml
-# Di ~/.hermes-2/config.yaml, tambah di bagian providers:
+# Tambahkan pada bagian providers di ~/.hermes-2/config.yaml:
 custom_providers:
   opengateway:
     base_url: https://opengateway.gitlawb.com/v1
-    api_key: ogw_live_YOUR_KEY_HERE
+    api_key: ogw_live_KUNCI_ANDA_DI_SINI
     name: OpenGateway
     default_model: mimo-v2.5-pro
 ```
 
-Terus set model pakai custom provider:
+Kemudian atur model untuk menggunakan penyedia kustom:
 
 ```bash
 hermes config set model.provider custom:opengateway
@@ -158,23 +158,23 @@ hermes config set model.provider custom:opengateway
 
 ---
 
-## Step 4: Test Koneksi
+## Langkah 4: Uji Koneksi
 
-### Test via curl (langsung)
+### Uji melalui curl (langsung)
 
 ```bash
 curl https://opengateway.gitlawb.com/v1/chat/completions \
-  -H "Authorization: Bearer ogw_live_YOUR_KEY_HERE" \
+  -H "Authorization: Bearer ogw_live_KUNCI_ANDA_DI_SINI" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "mimo-v2.5-pro",
     "messages": [
-      {"role": "user", "content": "hello, gateway"}
+      {"role": "user", "content": "halo, gateway"}
     ]
   }'
 ```
 
-Expected response:
+Respons yang diharapkan:
 
 ```json
 {
@@ -190,152 +190,153 @@ Expected response:
 }
 ```
 
-### Test via Hermes
+### Uji melalui Hermes
 
 ```bash
-# Start Hermes
+# Jalankan Hermes
 hermes
 
-# Di dalam chat, ketik:
-hello, test koneksi OpenGateway
+# Di dalam percakapan, ketik:
+halo, uji koneksi OpenGateway
 ```
 
-Kalau respon berarti sukses! ✅
+Jika mendapat respons, berarti konfigurasi berhasil! ✅
 
 ---
 
-## Step 5: Restart Gateway
+## Langkah 5: Mulai Ulang Gateway
 
-Kalau lo pake Hermes gateway (Telegram, Discord, dll):
+Jika Anda menggunakan Hermes gateway (Telegram, Discord, dll.):
 
 ```bash
-# Restart gateway supaya config baru ke-load
+# Mulai ulang gateway agar konfigurasi baru dimuat
 hermes gateway restart
 
-# Verify gateway running
+# Verifikasi gateway berjalan
 hermes gateway status
 ```
 
 ---
 
-## Available Models
+## Model yang Tersedia
 
-| Model | Provider | Description |
+| Model | Penyedia | Keterangan |
 |---|---|---|
-| `mimo-v2.5-pro` | Xiaomi MiMo | Flagship, paling powerful |
-| `mimo-v2.5` | Xiaomi MiMo | Standard version |
-| `mimo-v2-pro` | Xiaomi MiMo | Older pro model |
-| `mimo-v2-omni` | Xiaomi MiMo | Multimodal (text + vision) |
-| `mimo-v2-flash` | Xiaomi MiMo | Fast & efficient |
-| `mimo-v2.5-tts` | Xiaomi MiMo | Text-to-speech |
+| `mimo-v2.5-pro` | Xiaomi MiMo | Model unggulan, paling canggih |
+| `mimo-v2.5` | Xiaomi MiMo | Versi standar |
+| `mimo-v2-pro` | Xiaomi MiMo | Model pro generasi sebelumnya |
+| `mimo-v2-omni` | Xiaomi MiMo | Multimodal (teks + visi) |
+| `mimo-v2-flash` | Xiaomi MiMo | Cepat dan efisien |
+| `mimo-v2.5-tts` | Xiaomi MiMo | Konversi teks ke ucapan |
 | `google/gemini-3.1-flash-lite-preview` | GMI Cloud | Google Gemini |
 
-> 💡 **Recommended**: `mimo-v2.5-pro` — flagship model, paling banyak dipake (9.9M+ requests di global usage)
+> 💡 **Rekomendasi**: `mimo-v2.5-pro` — model unggulan yang paling banyak digunakan (lebih dari 9,9 juta permintaan di penggunaan global)
 
 ---
 
-## Troubleshooting
+## Pemecahan Masalah
 
-### "unauthenticated" error
+### Kesalahan "unauthenticated"
 
 ```bash
-# Cek key bener
-echo "ogw_live_YOUR_KEY_HERE" | head -c 10
-# Pastiin awalannya: ogw_live_
+# Pastikan kunci Anda benar
+echo "ogw_live_KUNCI_ANDA_DI_SINI" | head -c 10
+# Awal harus: ogw_live_
 
-# Test langsung
+# Uji langsung
 curl -s https://opengateway.gitlawb.com/v1/chat/completions \
-  -H "Authorization: Bearer ogw_live_YOUR_KEY_HERE" \
+  -H "Authorization: Bearer ogw_live_KUNCI_ANDA_DI_SINI" \
   -H "Content-Type: application/json" \
-  -d '{"model":"mimo-v2.5-pro","messages":[{"role":"user","content":"hi"}],"max_tokens":5}'
+  -d '{"model":"mimo-v2.5-pro","messages":[{"role":"user","content":"halo"}],"max_tokens":5}'
 ```
 
-### "Not found. Use /v1/<provider>/<path>"
+### Pesan "Not found. Use /v1/<provider>/<path>"
 
-Endpoint yang bener: `https://opengateway.gitlawb.com/v1/chat/completions`
-Bukan: `https://opengateway.gitlawb.com/v1/models` (ini gak ada)
+Endpoint yang benar: `https://opengateway.gitlawb.com/v1/chat/completions`
+Bukan: `https://opengateway.gitlawb.com/v1/models` (tidak tersedia)
 
-### Model gak dikenal
+### Model tidak dikenali
 
-Pastikan model name bener:
+Pastikan nama model sudah benar:
+
 ```bash
 # ✅ Benar
 "model": "mimo-v2.5-pro"
 
 # ❌ Salah
-"model": "mimo-v2.5-pro-20260422"  # ini auto-resolve dari API
+"model": "mimo-v2.5-pro-20260422"  # nama ini akan di-resolve otomatis oleh API
 ```
 
-### Context window terlalu kecil
+### Jendela konteks terlalu kecil
 
-Di config.yaml, set:
+Atur pada file config.yaml:
+
 ```yaml
 model:
-  context_length: 1000000  # 1M tokens
+  context_length: 1000000  # 1 juta token
 ```
 
-### Gateway gak mau restart
+### Gateway tidak dapat dimulai ulang
 
 ```bash
-# Force kill dan restart
+# Hentikan paksa dan jalankan kembali
 hermes gateway stop
 hermes gateway start
 ```
 
 ---
 
-## FAQ
+## Pertanyaan yang Sering Diajukan
 
-### Berapa lama gratis-nya?
+### Berapa lama masa gratisnya?
 
-Selama **partnership window** — durasi pasti gak di-publish. Buruan ambil selagi bisa!
+Selama **jendela kemitraan** berlangsung — durasi pastinya tidak dipublikasikan. Segera manfaatkan selagi tersedia!
 
-### Ada batas token?
+### Apakah ada batas penggunaan token?
 
-Dashboard gak nampilin exact quota per key. Tapi dari global usage, gateway ini nanganin **954B+ tokens** across all users. Sejauh ini gak ada yang kena limit.
+Dasbor tidak menampilkan batas kunci secara eksplisit. Namun berdasarkan data penggunaan global, gateway ini telah menangani **lebih dari 954 miliar token** dari seluruh pengguna. Sejauh ini, tidak ada pengguna yang dilaporkan mencapai batas.
 
-### Bisa dipake di OpenClaw juga?
+### Apakah bisa digunakan di OpenClaw?
 
-Bisa! OpenClaw juga support custom OpenAI-compatible endpoint. Set base URL ke `https://opengateway.gitlawb.com/v1` dan pakai key yang sama.
+Tentu bisa. OpenClaw juga mendukung endpoint kustom yang kompatibel dengan OpenAI. Atur URL dasar ke `https://opengateway.gitlawb.com/v1` dan gunakan kunci yang sama.
 
-### Bisa dipake di Claude Code / Codex?
+### Apakah bisa digunakan di Claude Code atau Codex?
 
-Bisa, selama tool-nya support OpenAI-compatible endpoint. Tinggal ganti base URL.
+Bisa, selama alat tersebut mendukung endpoint yang kompatibel dengan OpenAI. Cukup ganti URL dasar.
 
-### Bedanya sama langsung pake Xiaomi API?
+### Apa perbedaannya dengan langsung menggunakan API Xiaomi?
 
-OpenGateway nge-route lewat gateway mereka, jadi:
-- Lo gak perlu punya Xiaomi API key sendiri
-- Gratis selama partnership window
-- Ada global usage dashboard
-- Tapi tergantung availability gateway-nya
+OpenGateway melakukan routing melalui gerbang mereka, sehingga:
+
+- Anda tidak perlu memiliki kunci API Xiaomi sendiri
+- Gratis selama jendela kemitraan
+- Tersedia dasbor penggunaan global
+- Namun ketersediaan bergantung pada gerbang tersebut
 
 ---
 
-## Global Usage Stats
+## Statistik Penggunaan Global
 
-Live stats bisa dilihat di: **https://gitlawb.com/opengateway/usage/global**
+Statistik real-time dapat dilihat di: **https://gitlawb.com/opengateway/usage/global**
 
-| Metric | Value |
+| Metrik | Nilai |
 |---|---|
-| Total Requests | 10.6M+ |
-| Top Model | mimo-v2.5-pro (9.9M requests) |
-| Total Tokens | 954B+ |
-| Avg Tokens/Request | ~96K |
-| Providers | Xiaomi MiMo, GMI Cloud |
+| Total Permintaan | Lebih dari 10,6 juta |
+| Model Terpopuler | mimo-v2.5-pro (9,9 juta permintaan) |
+| Total Token | Lebih dari 954 miliar |
+| Rata-rata Token/Permintaan | Sekitar 96 ribu |
+| Penyedia | Xiaomi MiMo, GMI Cloud |
 
 ---
 
-## Contributing
+## Berkontribusi
 
-PR welcome! Kalau lo punya update atau fix, buka issue atau PR.
+Kontribusi sangat diperbuka! Jika Anda memiliki pembaruan atau perbaikan, silakan buka isu atau kirimkan permintaan tarik.
 
-## License
+## Lisensi
 
 MIT
 
 ---
 
-**Made with ❤️ by zaikofufu + Hermes Agent**
-
-> "Is this answer immediately executable?" — if no, rewrite it. — zaikoagent 🔥
+**Dibuat dengan ❤️ oleh zaikofufu + Hermes Agent**
